@@ -40,7 +40,8 @@ def scan_clients(interface, target_bssid):
     return clients
 
 def main():
-    original_interface = "wlan0"  # Cambia esto si tu interfaz tiene otro nombre
+    original_interface = input("Please enter the network interface (e.g., wlan0): ")
+    
     monitor_interface = enable_monitor_mode(original_interface)
     
     try:
